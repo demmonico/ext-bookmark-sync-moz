@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Bookmark Sync",
+  "version": "0.2",
+  "description": "Mozilla Firefox extension to synchronization bookmarks in cross-platform context",
+  "homepage_url": "https://github.com/demmonico/ext-bookmark-sync-moz",
+  "icons": {
+    "48": "icons/bookmark-star.png",
+    "96": "icons/bookmark-star@2x.png"
+  },
+
+  "permissions": [
+    "bookmarks",
+    "tabs",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/star-empty-38.png",
+    "default_title": "Bookmark Sync"
+  },
+
+  "background":
+  {
+    "scripts": ["request.js", "background.js"]
+  },
+
+  "options_ui" : {
+    "page": "settings/settings.html"
+  }
+
+}
